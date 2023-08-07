@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
     
@@ -13,12 +15,15 @@
     <div class="container">
         <div class="left">
             <div class="info">
-                <h2>Overcast Cloud</h2>
+                <h2 id="condition"></h2>
                 <p>city</p>
-                <p>day, date, time</p>
-                <p>temp</p>
+                <p id="Date"></p>
+                <p id="temp"></p>
                 <p>display</p>
-                <p>search</p>
+                <form action="">
+                    <input type="text" placeholder="Search location" class="search">
+                    <button class="search-button" >Search</button>
+                </form>
             </div>
         </div>
 
