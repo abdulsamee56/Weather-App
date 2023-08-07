@@ -4,6 +4,10 @@ const apiUrl = 'https://api.weatherapi.com/v1';
 const dates = document.getElementById('Date');
 const conditions = document.getElementById('condition');
 const temp = document.getElementById('temp');
+const search = document.querySelector('.search');
+const searchBtn = document.querySelector('.search-button');
+const city = document.getElementById('city');
+const humid = document.getElementById('humid');
 // Function to fetch weather data and log it to the console
 function getWeatherData(city) {
   const url = `${apiUrl}/current.json?key=${apiKey}&q=${city}`;
@@ -14,6 +18,7 @@ function getWeatherData(city) {
       console.log('Weather Data:', data.current.feelslike_f);
       conditions.textContent = data.current.condition.text;
       temp.textContent = data.current.feelslike_f + ' F° ';
+      humid.textContent = data.current.humidity + "% Humidity";
       // Update the date and time after weather data is fetched
       const currentDateTime = new Date();
 
@@ -31,9 +36,17 @@ function getWeatherData(city) {
       dates.textContent = formattedDateTime;
     })
     .catch(error => {
-      console.error('Error fetching data:', error);
-    });
+        console.error('Error fetching data:', error);
+        return; // Prevent further actions in case of error
+      });
 }
 
-// Call the function with the desired city (e.g., 'New York')
-getWeatherData('michigan');
+
+searchBtn.addEventListener('click', (event)=>{
+    event.preventDefault(); // Prevent form submission
+
+    getWeatherData(search.value);
+    city.textContent= search.value;
+})
+
+

@@ -7,7 +7,9 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Pangolin&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -16,10 +18,12 @@
         <div class="left">
             <div class="info">
                 <h2 id="condition"></h2>
-                <p>city</p>
+                <p id="city"></p>
                 <p id="Date"></p>
                 <p id="temp"></p>
-                <p>display</p>
+                <p id="humid"></p>
+                <p id="display"></p><!--this should toggle f or c-->
+                
                 <form action="">
                     <input type="text" placeholder="Search location" class="search">
                     <button class="search-button" >Search</button>
@@ -29,26 +33,7 @@
 
         <div class="right">
             <div class="extra">
-                <div class="groups">
-                    <p>img</p>
-                    <p>feels like</p>
-                    <p>temp</p>
-                </div>
-                <div class="groups">
-                    <p>img</p>
-                    <p>feels like</p>
-                    <p>temp</p>
-                </div>
-                <div class="groups">
-                    <p>img</p>
-                    <p>feels like</p>
-                    <p>temp</p>
-                </div>
-                <div class="groups">
-                    <p>img</p>
-                    <p>feels like</p>
-                    <p>temp</p>
-                </div>
+                <img src="/cloud.png" alt="" class="cloud">
             </div>
         </div>
     </div>
