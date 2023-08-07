@@ -10,11 +10,13 @@
 body{
     margin:0;
     padding:0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
+    font-weight:600;
+    background: linear-gradient(to bottom, #9c7ab1, #50266b); 
 }
 
 .container{
-    background: url('beach.jpg');
+   /*background: url('beach.jpg');*/
     height:100vh;
     background-size: cover;
     background-position: center;
